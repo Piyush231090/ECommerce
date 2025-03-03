@@ -45,7 +45,6 @@ public class BaseClass {
 		return;
 		}
 		
-		
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(p.getProperty("appurl"));  //reading appurl from properties file

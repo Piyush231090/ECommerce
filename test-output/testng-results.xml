@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-28T12:11:47 GMT" name="Suite" finished-at="2025-02-28T12:12:00 GMT" duration-ms="13114">
+  <suite started-at="2025-03-01T19:17:07 GMT" name="Master Suite" finished-at="2025-03-01T19:17:57 GMT" duration-ms="50000">
     <groups>
     </groups>
-    <test started-at="2025-02-28T12:11:47 GMT" name="chrometest" finished-at="2025-02-28T12:11:53 GMT" duration-ms="6290">
-      <class name="testCases.AccountRegistrationTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.AccountRegistrationTest@1d2adfbe]" started-at="2025-02-28T12:11:47 GMT" name="setup" finished-at="2025-02-28T12:11:51 GMT" duration-ms="3960" status="PASS">
+    <test started-at="2025-03-01T19:17:07 GMT" name="Test" finished-at="2025-03-01T19:17:57 GMT" duration-ms="50000">
+      <class name="testCases.LoginDataDrivenTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.LoginDataDrivenTest@36902638]" started-at="2025-03-01T19:17:07 GMT" name="setup" finished-at="2025-03-01T19:17:11 GMT" duration-ms="3456" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,71 +23,135 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@1d2adfbe]" started-at="2025-02-28T12:11:51 GMT" name="verifyAccountRegistration" finished-at="2025-02-28T12:11:53 GMT" duration-ms="1804" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAccountRegistration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.AccountRegistrationTest@1d2adfbe]" started-at="2025-02-28T12:11:53 GMT" name="teardown" finished-at="2025-02-28T12:11:53 GMT" duration-ms="513" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testCases.AccountRegistrationTest -->
-    </test> <!-- chrometest -->
-    <test started-at="2025-02-28T12:11:47 GMT" name="edgetest" finished-at="2025-02-28T12:11:55 GMT" duration-ms="7418">
-      <class name="testCases.AccountRegistrationTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.AccountRegistrationTest@31304f14]" started-at="2025-02-28T12:11:47 GMT" name="setup" finished-at="2025-02-28T12:11:50 GMT" duration-ms="3343" status="PASS">
+        <test-method signature="verifyLoginDDT(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.LoginDataDrivenTest@36902638]" started-at="2025-03-01T19:17:11 GMT" name="verifyLoginDDT" data-provider="loginData" finished-at="2025-03-01T19:17:22 GMT" duration-ms="11246" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[windows]]>
+                <![CDATA[piyushingle07@gmail.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[edge]]>
+                <![CDATA[Password@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[valid]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at testCases.LoginDataDrivenTest.verifyLoginDDT(LoginDataDrivenTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginDDT -->
+        <test-method signature="verifyLoginDDT(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.LoginDataDrivenTest@36902638]" started-at="2025-03-01T19:17:22 GMT" name="verifyLoginDDT" data-provider="loginData" finished-at="2025-03-01T19:17:34 GMT" duration-ms="11166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[laxmi@yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[laxmi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@31304f14]" started-at="2025-02-28T12:11:50 GMT" name="verifyAccountRegistration" finished-at="2025-02-28T12:11:53 GMT" duration-ms="2200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAccountRegistration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.AccountRegistrationTest@31304f14]" started-at="2025-02-28T12:11:53 GMT" name="teardown" finished-at="2025-02-28T12:11:55 GMT" duration-ms="1858" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- testCases.AccountRegistrationTest -->
-    </test> <!-- edgetest -->
-    <test started-at="2025-02-28T12:11:47 GMT" name="firefoxtest" finished-at="2025-02-28T12:12:00 GMT" duration-ms="13114">
-      <class name="testCases.AccountRegistrationTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.AccountRegistrationTest@459e9125]" started-at="2025-02-28T12:11:47 GMT" name="setup" finished-at="2025-02-28T12:11:57 GMT" duration-ms="9972" status="PASS">
+        </test-method> <!-- verifyLoginDDT -->
+        <test-method signature="verifyLoginDDT(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.LoginDataDrivenTest@36902638]" started-at="2025-03-01T19:17:34 GMT" name="verifyLoginDDT" data-provider="loginData" finished-at="2025-03-01T19:17:45 GMT" duration-ms="11702" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[windows]]>
+                <![CDATA[pravesh@yahoo.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[pravesh]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@459e9125]" started-at="2025-02-28T12:11:57 GMT" name="verifyAccountRegistration" finished-at="2025-02-28T12:12:00 GMT" duration-ms="2453" status="PASS">
+        </test-method> <!-- verifyLoginDDT -->
+        <test-method signature="verifyLoginDDT(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.LoginDataDrivenTest@36902638]" started-at="2025-03-01T19:17:45 GMT" name="verifyLoginDDT" data-provider="loginData" finished-at="2025-03-01T19:17:57 GMT" duration-ms="11501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[somnath@yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[som]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAccountRegistration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.AccountRegistrationTest@459e9125]" started-at="2025-02-28T12:12:00 GMT" name="teardown" finished-at="2025-02-28T12:12:00 GMT" duration-ms="676" status="PASS">
+        </test-method> <!-- verifyLoginDDT -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.LoginDataDrivenTest@36902638]" started-at="2025-03-01T19:17:57 GMT" name="teardown" finished-at="2025-03-01T19:17:57 GMT" duration-ms="410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- testCases.AccountRegistrationTest -->
-    </test> <!-- firefoxtest -->
-  </suite> <!-- Suite -->
+      </class> <!-- testCases.LoginDataDrivenTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Master Suite -->
 </testng-results>
