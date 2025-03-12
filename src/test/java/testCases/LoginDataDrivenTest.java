@@ -11,7 +11,7 @@ import utilities.DataProviders;
 
 public class LoginDataDrivenTest extends BaseClass {
 	
-	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class) // getting dataProvide from different class
+	@Test(dataProvider = "loginData", dataProviderClass = DataProviders.class, groups = "datadriven") // getting dataProvide from different class
 	public void verifyLoginDDT(String email, String pwd, String exp) {
 		logger.info("Inside verify login method..");
 		

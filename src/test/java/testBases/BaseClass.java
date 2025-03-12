@@ -26,7 +26,7 @@ public class BaseClass {
 	public Logger logger;  //log4j
 	public Properties p;
 	
-	@BeforeClass
+	@BeforeClass(groups = { "sanity", "regression", "master", "datadriven"})
 	@Parameters({"os","browser"})
 	public void setup(String os, String br) throws IOException {
 		logger= LogManager.getLogger(this.getClass());
@@ -51,7 +51,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 	}
 	
-	@AfterClass
+	@AfterClass(groups = { "sanity", "regression", "master", "datadriven"})
 	public void teardown() {
 		driver.quit();
 	}

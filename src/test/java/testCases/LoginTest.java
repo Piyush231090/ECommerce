@@ -10,7 +10,7 @@ import testBases.BaseClass;
 
 public class LoginTest extends BaseClass{
 	
-	@Test
+	@Test(groups = {"sanity","master"})
 	public void verifyLogin() {
 		logger.info("Inside verify login method..");
 		try {
