@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-11T15:18:18 GMT" name="Master Suite" finished-at="2025-03-11T15:18:25 GMT" duration-ms="7144">
+  <suite started-at="2025-03-13T19:23:38 GMT" name="Master Suite" finished-at="2025-03-13T19:23:49 GMT" duration-ms="10998">
     <groups>
       <group name="regression">
-        <method signature="AccountRegistrationTest.verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@6adbc9d]" name="verifyAccountRegistration" class="testCases.AccountRegistrationTest"/>
+        <method signature="AccountRegistrationTest.verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@1b7cc17c]" name="verifyAccountRegistration" class="testCases.AccountRegistrationTest"/>
       </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="LoginTest.verifyLogin()[pri:0, instance:testCases.LoginTest@35e2d654]" name="verifyLogin" class="testCases.LoginTest"/>
+      </group> <!-- sanity -->
       <group name="master">
-        <method signature="AccountRegistrationTest.verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@6adbc9d]" name="verifyAccountRegistration" class="testCases.AccountRegistrationTest"/>
+        <method signature="AccountRegistrationTest.verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@1b7cc17c]" name="verifyAccountRegistration" class="testCases.AccountRegistrationTest"/>
+        <method signature="LoginTest.verifyLogin()[pri:0, instance:testCases.LoginTest@35e2d654]" name="verifyLogin" class="testCases.LoginTest"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2025-03-11T15:18:18 GMT" name="Test" finished-at="2025-03-11T15:18:25 GMT" duration-ms="7144">
-      <class name="testCases.AccountRegistrationTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.AccountRegistrationTest@6adbc9d]" started-at="2025-03-11T15:18:18 GMT" name="setup" finished-at="2025-03-11T15:18:22 GMT" duration-ms="4421" status="PASS">
+    <test started-at="2025-03-13T19:23:38 GMT" name="Test" finished-at="2025-03-13T19:23:49 GMT" duration-ms="10998">
+      <class name="testCases.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.LoginTest@35e2d654]" started-at="2025-03-13T19:23:44 GMT" name="setup" finished-at="2025-03-13T19:23:47 GMT" duration-ms="2496" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,11 +33,37 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@6adbc9d]" started-at="2025-03-11T15:18:22 GMT" name="verifyAccountRegistration" finished-at="2025-03-11T15:18:24 GMT" duration-ms="1865" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:testCases.LoginTest@35e2d654]" started-at="2025-03-13T19:23:47 GMT" name="verifyLogin" finished-at="2025-03-13T19:23:48 GMT" duration-ms="1518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.LoginTest@35e2d654]" started-at="2025-03-13T19:23:48 GMT" name="teardown" finished-at="2025-03-13T19:23:49 GMT" duration-ms="621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testCases.LoginTest -->
+      <class name="testCases.AccountRegistrationTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.AccountRegistrationTest@1b7cc17c]" started-at="2025-03-13T19:23:38 GMT" name="setup" finished-at="2025-03-13T19:23:42 GMT" duration-ms="3670" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAccountRegistration()[pri:0, instance:testCases.AccountRegistrationTest@1b7cc17c]" started-at="2025-03-13T19:23:42 GMT" name="verifyAccountRegistration" finished-at="2025-03-13T19:23:43 GMT" duration-ms="1860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAccountRegistration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.AccountRegistrationTest@6adbc9d]" started-at="2025-03-11T15:18:24 GMT" name="teardown" finished-at="2025-03-11T15:18:25 GMT" duration-ms="841" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testCases.AccountRegistrationTest@1b7cc17c]" started-at="2025-03-13T19:23:43 GMT" name="teardown" finished-at="2025-03-13T19:23:44 GMT" duration-ms="693" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

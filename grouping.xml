@@ -5,11 +5,16 @@
   <groups>
   	<run>
   		<!--include name="sanity"/-->
-  		<include name="regression"/>
-  		<!--<include name="master"/>-->
+  		<!--include name="regression"/-->
+  		<include name="master"/>
   		<!-- <exclude name=""/>-->
   	</run>
   </groups>
+  
+  <listeners>
+		<listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+  
   <test thread-count="5" name="Test">
   <parameter name="os" value="windows"/>
   <parameter name="browser" value="chrome"/>

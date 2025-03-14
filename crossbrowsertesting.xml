@@ -3,7 +3,11 @@
 
 <suite name="Suite" thread-count="5" parallel="tests">  <!--to do parallel testing we need to add one parameter 
 named parallel. without that serial execution will happen -->
-
+  <listeners>
+		<listener class-name="utilities.ExtentReportManager"/>
+  </listeners>
+	
+	
   <test  name="chrometest">
   <parameter name="os" value="windows"/>
   <parameter name="browser" value="chrome"/>
